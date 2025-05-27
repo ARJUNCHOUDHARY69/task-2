@@ -1,0 +1,56 @@
+# Phishing Email Analysis Report
+
+## 🎯 Objective
+Analyze a suspicious email and identify phishing indicators.
+
+---
+
+## 📧 Sample Email Analyzed
+**From**: "PayPal Support" <support@paypa1.com>  
+**Subject**: Urgent: Account Access Suspended  
+**Body**: See above
+
+---
+
+## 🧪 Phishing Indicators Found
+
+1. **Email Spoofing**:
+   - Email address `support@paypa1.com` is a spoofed domain (uses "paypa**1**" instead of "paypal").
+   - Sender name is misleading.
+
+2. **Suspicious Links**:
+   - URL displayed: `http://paypal.verify-user.com/login`  
+   - Hovered URL doesn't match official PayPal domain (`paypal.com`).
+   - Uses HTTP instead of secure HTTPS.
+
+3. **Header Analysis**:
+   - Analyzed with [MXToolbox Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)
+   - Revealed a mismatch between sending server and domain owner.
+
+4. **Urgent/Threatening Language**:
+   - "Urgent", "Failure to do so", "permanent suspension" triggers fear.
+
+5. **Grammar and Spelling Errors**:
+   - Sentence: “Failure to do so within 24 hours...” lacks professional tone.
+   - Suspiciously generic greeting: “Dear User”.
+
+6. **Attachment**:
+   - `verify_account.pdf` — potentially malicious.
+
+---
+
+## ✅ Summary of Phishing Traits
+
+- Spoofed sender email
+- Urgent call-to-action with threats
+- Suspicious attachment
+- Fake URL not owned by PayPal
+- Bad grammar, generic greeting
+- Header mismatch (server ≠ domain)
+
+---
+
+## 🔗 Tools Used
+
+- Email Header Analyzer: https://mxtoolbox.com/EmailHeaders.aspx  
+- Hover link check via any email client or webmail
